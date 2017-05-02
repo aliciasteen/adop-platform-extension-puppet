@@ -3,19 +3,19 @@
     "Mappings": {
         "RegionMap": {
             "eu-central-1": {
-                "AMI": "ami-9bf712f4"
+                "AMI": "ami-5216c53d"
             },
             "eu-west-1": {
-                "AMI": "ami-7abd0209"
+                "AMI": "ami-ee9ea688"
             },
             "us-east-1": {
-                "AMI": "ami-6d1c2007"
+                "AMI": "ami-e03cb1f6"
             },
             "us-west-1": {
-                "AMI": "ami-af4333cf"
+                "AMI": "ami-06c49e66"
             },
             "us-west-2": {
-                "AMI": "ami-d2c924b2"
+                "AMI": "ami-d844d5b8"
             }
         }
     },
@@ -90,14 +90,6 @@
                         "ToPort": "22"
                     },
                     {
-                        "CidrIp": {
-                            "Ref": "InboundCIDR"
-                        },
-                        "FromPort": "80",
-                        "IpProtocol": "tcp",
-                        "ToPort": "80"
-                    },
-                    {
                         "CidrIp":  {
                             "Ref": "InboundCIDR"
                         },
@@ -109,9 +101,33 @@
                         "CidrIp":  {
                             "Ref": "InboundCIDR"
                         },
-                        "FromPort": "8080",
+                        "FromPort": "8142",
                         "IpProtocol": "tcp",
-                        "ToPort": "8080"
+                        "ToPort": "8142"
+                    },
+                    {
+                        "CidrIp":  {
+                            "Ref": "InboundCIDR"
+                        },
+                        "FromPort": "8143",
+                        "IpProtocol": "tcp",
+                        "ToPort": "8143"
+                    },
+                    {
+                        "CidrIp":  {
+                            "Ref": "InboundCIDR"
+                        },
+                        "FromPort": "61613",
+                        "IpProtocol": "tcp",
+                        "ToPort": "61613"
+                    },
+                    {
+                        "CidrIp":  {
+                            "Ref": "InboundCIDR"
+                        },
+                        "FromPort": "8140",
+                        "IpProtocol": "tcp",
+                        "ToPort": "8140"
                     }
                 ],
                 "VpcId": {
@@ -181,15 +197,7 @@
                             "",
                             [
                                 "#!/bin/bash\n",
-                                "export IP=$(hostname --ip-address)\n",
-                                "NODE=",
-                                {
-                                    "Ref": "EnvironmentName"
-                                },
-                                "\n",
-                                "yum install -y httpd\n",
-                                "echo \"Listen 8080\" >> /etc/httpd/conf/httpd.conf\n",
-                                "service httpd start\n"
+                                "echo 'helloworld'\n"
                             ]
                         ]
                     }
