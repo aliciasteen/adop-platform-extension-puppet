@@ -1,5 +1,5 @@
 {
-    "Description": "EC2 platform extension template for ADOP/B",
+    "Description": "EC2 platform extension template for ADOP/C",
     "Mappings": {
         "RegionMap": {
             "eu-central-1": {
@@ -44,7 +44,7 @@
             "Type": "AWS::EC2::Subnet::Id"
         },
         "InstanceType": {
-            "Default": "t2.large",
+            "Default": "m4.large",
             "Description": "EC2 instance type",
             "Type": "String"
         },

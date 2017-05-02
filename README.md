@@ -1,4 +1,4 @@
-# Chef Server Platform Extension
+# Puppet Server Platform Extension
 This platform extension spins up a blank Puppet server
 
 ## Getting Started
