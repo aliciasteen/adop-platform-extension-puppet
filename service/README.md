@@ -1,7 +1,7 @@
 # Service
 This directory can contain sub directories containing the method to provision a service.
 
-## Structure 
+## Structure
 
 This component allows following implementations of the service -
 

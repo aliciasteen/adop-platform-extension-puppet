@@ -197,7 +197,8 @@
                             "",
                             [
                                 "#!/bin/bash\n",
-                                "echo 'helloworld'\n"
+                                "/opt/puppetlabs/aws/bin/check_status.sh --wait\n"
+                                "/opt/puppetlabs/aws/bin/configure-pe.rb -i -p 'ADOPdefaultP4$$'\n"
                             ]
                         ]
                     }
