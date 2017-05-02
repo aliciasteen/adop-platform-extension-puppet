@@ -1,0 +1,1 @@
+# adop-platform-extension-puppet
