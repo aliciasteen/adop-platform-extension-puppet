@@ -90,9 +90,7 @@
                         "ToPort": "22"
                     },
                     {
-                        "CidrIp":  {
-                            "Ref": "InboundCIDR"
-                        },
+                        "CidrIp": "0.0.0.0/0",
                         "FromPort": "443",
                         "IpProtocol": "tcp",
                         "ToPort": "443"
@@ -197,7 +195,7 @@
                             "",
                             [
                                 "#!/bin/bash\n",
-                                "/opt/puppetlabs/aws/bin/check_status.sh --wait\n"
+                                "/opt/puppetlabs/aws/bin/check_status.sh --wait\n",
                                 "/opt/puppetlabs/aws/bin/configure-pe.rb -i -p 'ADOPdefaultP4$$'\n"
                             ]
                         ]
